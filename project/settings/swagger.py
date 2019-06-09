@@ -17,7 +17,7 @@ SWAGGER_SETTINGS = {
     'resource_access_handler': None,
     'base_path': '127.0.0.1:8000/docs',
     'info': {
-        'contact': 'scher56@gmail.com',
+        'contact': '',
         'description':
             'This is a sample server for testing RESTful APIs.'
             'All API endpoints return fake information for testing needs.'

@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from project.exceptions import ProjectLocalSettingsDoesNotExist
 
 ##################################################################
 # ALL INCLUDES OF SETTINGS FILES
@@ -10,9 +9,7 @@ from .base import *
 from .apps import *
 from .auth import *
 from .datetime import *
-from .development import *
 from .languages import *
-from .logging import *
 from .middlewares import *
 from .static import *
 from .templates import *
@@ -22,6 +19,8 @@ from .swagger import *
 
 try:
     from .local import *
+    from .local_logging import *
 except ImportError:
     from .production import *
+    from .production_logging import *
     print("There is no local settings")
