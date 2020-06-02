@@ -6,6 +6,7 @@
 # Add your new settings file here, order can be important
 ##################################################################
 from .base import *
+from .logging import *
 from .apps import *
 from .auth import *
 from .datetime import *
@@ -19,8 +20,6 @@ from .swagger import *
 
 try:
     from .local import *
-    from .local_logging import *
 except ImportError:
     from .production import *
-    from .production_logging import *
     print("There is no local settings")

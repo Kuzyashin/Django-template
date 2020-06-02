@@ -1,13 +1,18 @@
 REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
-    'DEFAULT_AUTHENTICATION_CLASSES': (
+
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
-    ),
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly'
     ],
-    'PAGE_SIZE': 10
+    'DEFAULT_PAGINATION_CLASS':
+        'rest_framework.pagination.LimitOffsetPagination',
+
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated'
+    ],
+    'PAGE_SIZE': 100
 }
 
 ANONYMOUS_USER_ID = -1
+
+

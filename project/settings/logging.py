@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+
+from .base import LOGS_ROOT
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -32,7 +35,7 @@ LOGGING = {
         'production_file': {
             'level': 'INFO',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': '/project/logs/django_main.log',
+            'filename': f'{LOGS_ROOT}/django_main.log',
             'maxBytes': 1024 * 1024 * 10,  # 5 MB
             'backupCount': 10,
             'formatter': 'main_formatter',
@@ -41,12 +44,12 @@ LOGGING = {
         'debug_file': {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': '/project/logs/django_main_debug.log',
+            'filename': f'{LOGS_ROOT}/django_main_debug.log',
             'maxBytes': 1024 * 1024 * 10,  # 5 MB
             'backupCount': 10,
             'formatter': 'main_formatter',
             'filters': ['require_debug_true'],
-        },
+        }
     },
     'loggers': {
         'django.request': {
@@ -60,3 +63,4 @@ LOGGING = {
         },
     }
 }
+

@@ -20,6 +20,8 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir
 # base repo folder, here stored virtualenv files, manage.py etc
 BASE_DIR = os.path.abspath(os.path.join(PROJECT_ROOT, os.pardir))
 
+LOGS_ROOT = os.path.join(BASE_DIR, "logs")
+
 # folder with collected static files, ready to download by client apps
 PUBLIC_ROOT = os.path.join(BASE_DIR, "public")
 
