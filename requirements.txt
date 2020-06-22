@@ -1,4 +1,5 @@
 Django==2.2.13
 django-filter
 djangorestframework
-requests
+drf-yasg
+psycopg2
